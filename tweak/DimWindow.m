@@ -13,7 +13,7 @@
 	}
 	
 	if (self) {
-		self.backgroundColor = [UIColor blackColor];
+		self.backgroundColor = [UIColor whiteColor];
 		self.windowLevel = 1000001;
 		self.alpha = 0.45;
 		self.hidden = YES;

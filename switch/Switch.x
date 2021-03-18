@@ -28,8 +28,6 @@
 - (void)applyAlternateActionForSwitchIdentifier:(NSString *)switchIdentifier {
 	if ([[[NSUserDefaults alloc] initWithSuiteName:@"com.thomasfinch.dim"] integerForKey:@"flipswitchHoldAction"] == 0)
 		[[%c(DimController) sharedInstance] showControlPanel];
-	else
-	    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=Dim"]];
 }
 
 @end

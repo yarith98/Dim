@@ -1,5 +1,6 @@
-ARCHS = armv7 armv7s arm64 arm64e
-TARGET=iphone:clang:11.2:10.0
+ARCHS = arm64
+TARGET=iphone:clang:latest:11.2
+SYSROOT=$(THEOS)/sdks/iPhoneOS11.2.sdk
 THEOS_PACKAGE_DIR_NAME = debs
 
 include $(THEOS)/makefiles/common.mk

@@ -1,7 +1,7 @@
 #import "DimController.h"
 #import <objc/runtime.h>
 
-const CGFloat MAX_ALPHA = 0.8; //So the user can see their screen, even at max darkness
+const CGFloat MAX_ALPHA = 0.9; //So the user can see their screen, even at max darkness
 
 @implementation DimController
 
@@ -71,9 +71,7 @@ const CGFloat MAX_ALPHA = 0.8; //So the user can see their screen, even at max d
 }
 
 - (void)showControlPanel {
-	UIAlertView *controlPanel = [[UIAlertView alloc] initWithTitle:@"Dim Control Panel" message:nil delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil];
 	UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 270, 100)];
-	[controlPanel setValue:containerView forKey:@"accessoryView"];
 
 	UILabel *enabledLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 15, containerView.frame.size.width, 20)];
 	enabledLabel.text = @"Enabled";
@@ -93,7 +91,6 @@ const CGFloat MAX_ALPHA = 0.8; //So the user can see their screen, even at max d
 	[brightnessSlider addTarget:self action:@selector(controlPanelSliderChanged:) forControlEvents:UIControlEventValueChanged];
 	[containerView addSubview:brightnessSlider];
 
-	[controlPanel show];
 }
 
 - (void)controlPanelSwitchChanged:(UISwitch*)enableSwitch {
